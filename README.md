@@ -1,6 +1,6 @@
-# Psi-NN Project Description
+# $\Psi$-NN Project Description
 
-Psi-NN adopts a three-step method of "distillation - structure extraction - network reconstruction", which can automatically discover and implicitly embed the physical properties of PDEs into the MLP network structure.
+$\Psi$-NN adopts a three-step method of "distillation - structure extraction - network reconstruction", which can automatically discover and implicitly embed the physical properties of PDEs into the MLP network structure.
 
 ![pipeline](image/README(CN)/pipeline.png "Pipeline")
 
