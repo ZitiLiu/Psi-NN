@@ -101,10 +101,11 @@ Symbolized Weights Matrix:
 Cluster Mapping (Letter -> Center):
 A: 1.225144624710083
 B: 0.043349750339984894
-
 Layer: fc1.bias
 Symbolized Weights Matrix:
 ['A' 'A' 'A' 'A' 'A' '-A' '-A' '-A' '-A' '-A' 'A' '-A' '-A' 'A' 'A' 'A']
+Cluster Mapping (Letter -> Center):
+A: 0.012397093698382378
 ```
 
 **Comparison Experiments**
