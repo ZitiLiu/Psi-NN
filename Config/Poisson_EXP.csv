@@ -1,0 +1,35 @@
+Names,Values,Poisson case example
+
+x_min,0,x最小值, minimum x
+x_max,1,x最大值, maximum x
+y_min,0,y最小值, minimum y
+y_max,1,y最大值, maximum y
+z_min,0,z最小值, minimum z
+z_max,0,z最大值, maximum z
+
+model,PINN PINN_post_poisson PsiNN_poisson,教师网络名称，注意必须和“Module”文件夹内名称一致, Model name ( teacher model if distillation active) should match the name in the "Module" folder
+regularization_state,0,是否使用正则化, regularization state
+load_state,0,是否加载模型, load state
+load_study_state,0,学生是否直接学习加载模型的输出, whether to directly learn from the loaded model output
+k_value,0,蒸馏学习系数, k value (distillation coefficient)
+
+grid_node_num,101,计算场单边节点数, grid node number per side (^2 in total)
+bun_node_num,101,边界场节点数, boundary node number
+figure_node_num,200,画图使用的节点数, figure node number
+
+data_serial,"1,2,3,4",逆问题中使用数据库的哪几项作为监督, which items in the database are used as supervision in the inverse problem
+para_ctrl,"1",控制方程可变参数，正问题就写准确值，逆问题只要和未知参数的数目相同即可，使用逗号分隔, control equation variable parameters
+
+node_num,20,节点数, node number
+input_num,2,输入变量个数, input number
+output_num,1,输出变量个数, output number
+hidden_layers_group,"2,1,1",教师PINN隐藏层神经元组数，可以为小数, hidden layers group
+hidden_layers_group_student,"1,1,1",学生PINN网络隐藏层神经元组数, hidden layers group (student)
+
+step_num,1,训练步数的组数，每组结束后学生网络将学习教师网络输出, step group number
+train_steps,30000,单组训练步数, train steps per group
+train_ratio,1,训练步数比例，学生网络是直接乘以这个值的，可以是小数, train ratio ( student / teacher )
+
+pace_record_state,1,是否记录实时模型, whether to record the real-time model
+pace_record_gap,"100,1000",记录间隔, the recording interval
+pace_record_skip,"0,50000",超过这个步数之后就更换间隔记录，默认100, the recording interval after exceeding this number of steps
