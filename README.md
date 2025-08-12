@@ -55,7 +55,7 @@ If you use this code in your research, please cite this project:
 
 Taking the Burgers equation as an example:
 
-![Burgers_setting](image/README(CN)/Burgers_exact_sample.png "Burgers setting")
+![Burgers_setting](image/README(CN)/burgers_exact_sample.png "Burgers setting")
 
 Its mathematical expression is:
 
