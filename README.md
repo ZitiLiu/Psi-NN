@@ -6,7 +6,7 @@ $\Psi$-NN adopts a three-step method of "distillation - structure extraction - n
 
 ## Example Settings
 
-This codebase provides the Psi-NN method used in the paper, including examples for the Laplace equation, Burgers equation, Poisson equation, and steady-state N-S equations. You can use `Panel.py` to call different config files to enable the corresponding examples.
+This codebase provides the $\Psi$-NN method used in the paper, including examples for the Laplace equation, Burgers equation, Poisson equation, and steady-state N-S equations. You can use `Panel.py` to call different config files to enable the corresponding examples.
 
 **Recommended Environment:**
 
@@ -32,12 +32,12 @@ If you need to change dependencies, modify `requirements.txt` and reinstall.
 - **Config/**: Stores hyperparameter configurations (e.g., number of nodes, iterations) for different examples in CSV format. Once computed, configurations should not be changed.
 - **Database/**: Stores data required for preset examples (CSV format). You can replace with your own data, but file names must remain the same.
 - **Module/**: Contains computational models and workflows.
-  - `Training.py`: Core computation methods, including Psi-NN and all examples.
+  - `Training.py`: Core computation methods, including $\Psi$-NN and all examples.
   - `SingleVis.py`, `GroupVis.py`: For result visualization.
   - Other NN-related files: For modular neural network construction. Files with the PINN-post suffix use different hard mapping functions.
 - **image/**: Stores images for the README.
 - **Panel.py**: Console entry point for easy model invocation. Input the config file name and index to run.
-- **pic_parameter.ipynb**: For visualizing the distilled structure of Psi-NN.
+- **pic_parameter.ipynb**: For visualizing the distilled structure of $\Psi$-NN.
 - **Results/**: Automatically generated after the first run to save output results.
 
 ## Example Results
@@ -70,7 +70,7 @@ Where:
 - $\omega_{f'} = \omega_D = 1$
 - $M_{f'}$, $M_D$ are the number of sampling points for the equation and data, respectively.
 
-**Psi-NN Example**
+**$\Psi$-NN Example**
 In `Panel.py`, call `Burgers_inv_distill_EXP.csv` and use `pic_parameter.ipynb` to visualize the clustering results of the student network structure.
 
 ![Cluster_results](image/README/k=0_cluster.png "cluster results")
@@ -108,7 +108,7 @@ Symbolized Weights Matrix:
 ```
 
 **Comparison Experiments**
-(In `Panel.py`, call `Burgers_EXP.csv` to compare the loss curves of Psi-NN, PINN, and PINN-post.)
+(In `Panel.py`, call `Burgers_EXP.csv` to compare the loss curves of $\Psi$-NN, PINN, and PINN-post.)
 
 ![Burgers_results](image/README/Burgers_inv_comp_loss_comparison.png "Burgers_results")
 
