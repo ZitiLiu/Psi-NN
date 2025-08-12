@@ -2,7 +2,7 @@
 
 $\Psi$-NN adopts a three-step method of "distillation - structure extraction - network reconstruction", which can automatically discover and implicitly embed the physical properties of PDEs into the MLP network structure.
 
-![pipeline](image/README(CN)/pipeline.png "Pipeline")
+![pipeline](image/README/pipeline.png "Pipeline")
 
 ## Example Settings
 
@@ -55,7 +55,7 @@ If you use this code in your research, please cite this project:
 
 Taking the Burgers equation as an example:
 
-![Burgers_setting](image/README(CN)/burgers_exact_sample.png "Burgers setting")
+![Burgers_setting](image/README/burgers_exact_sample.png "Burgers setting")
 
 Its mathematical expression is:
 
@@ -65,14 +65,16 @@ $$
 
 Loss function definition:
 
-$$
+![Formula](image/README/formula.png)
+
+<!-- $$
 \begin{aligned}
     & MSE = \omega_{f'} MSE_{f'} + \omega_{D} MSE_D \\
     & \omega_{f'} = \omega_D = 1 \\
     & MSE_{f'} = \frac{1}{M_{f'}} \sum_{i=1}^{M_{f'}} \left| \tilde{u}_t^i - \tilde{u}^i \tilde{u}_x^i - \lambda_1 \tilde{u}_{xx}^i \right|^2 \\
     & MSE_D = \frac{1}{M_D} \sum_{i=1}^{M_D} \left| \tilde{u}^i - \check{u}^i \right|^2
 \end{aligned}
-$$
+$$ -->
 
 Where:
 
@@ -82,7 +84,7 @@ Where:
 **Psi-NN Example**
 In `Panel.py`, call `Burgers_inv_distill_EXP.csv` and use `pic_parameter.ipynb` to visualize the clustering results of the student network structure.
 
-![Cluster_results](image/README(CN)/k=0_cluster.png "cluster results")
+![Cluster_results](image/README/k=0_cluster.png "cluster results")
 
 The left shows weight clustering, the right shows bias clustering, and from top to bottom are layers 1 to 4. The clustering results show trends; specific values may differ across devices, but the structure is similar.
 
@@ -119,7 +121,7 @@ Symbolized Weights Matrix:
 **Comparison Experiments**
 (In `Panel.py`, call `Burgers_EXP.csv` to compare the loss curves of Psi-NN, PINN, and PINN-post.)
 
-![Burgers_results](image/README(CN)/Burgers_inv_comp_loss_comparison.png "Burgers_results")
+![Burgers_results](image/README/Burgers_inv_comp_loss_comparison.png "Burgers_results")
 
 ---
 
