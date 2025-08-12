@@ -25,18 +25,7 @@ pip install -r requirements.txt
 
 If you need to change dependencies, modify `requirements.txt` and reinstall.
 
-**Citation:**
 
-If you use this code in your research, please cite this project:
-
-```bibtex
-@article{liu_2025_automatic,
-  title={Automatic Network Structure Discovery of Physics Informed Neural Networks via Knowledge Distillation},
-  author={Liu, Ziti and Liu, Yang and Yan, Xunshi and Liu, Wen and Nie, Han and Guo, Shuaiqi and Zhang, Chen-an},
-  note={Manuscript under review},
-  year={2025}
-}
-```
 
 ## Code Structure
 
@@ -124,5 +113,25 @@ Symbolized Weights Matrix:
 ![Burgers_results](image/README/Burgers_inv_comp_loss_comparison.png "Burgers_results")
 
 ---
+
+
+---
+
+## License
+
+This project is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.
+
+## Citation
+
+If you use this code in your research, please cite this project:
+
+```bibtex
+@article{liu_2025_automatic,
+  title={Automatic Network Structure Discovery of Physics Informed Neural Networks via Knowledge Distillation},
+  author={Liu, Ziti and Liu, Yang and Yan, Xunshi and Liu, Wen and Nie, Han and Guo, Shuaiqi and Zhang, Chen-an},
+  note={Manuscript under review},
+  year={2025}
+}
+```
 
 If you have any questions, feel free to submit an issue or contact the author.
