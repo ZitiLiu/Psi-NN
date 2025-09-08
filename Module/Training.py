@@ -15,7 +15,7 @@ torch.manual_seed(1234)  # 设置随机种子
 
 if torch.cuda.is_available():
     device = torch.device('cuda')
-    # print("GPU is available")
+    print("GPU is available")
 else:
     device = torch.device('cpu')
 
@@ -340,7 +340,7 @@ class model():
     def net_f(self):
         
         loss_f = torch.tensor(0.).to(device)
-        u = self.net(torch.cat([self.x, self.y], dim=1)).cuda()
+        u = self.net(torch.cat([self.x, self.y], dim=1)).to(device)
 
         # print(f'ques_name: {self.ques_name}')
         if 'Flow' in self.ques_name:
@@ -462,12 +462,12 @@ class model():
         loss_global = torch.tensor(0.).to(device)
 
         if 'Laplace' in self.ques_name:
-            # u = self.net(self.x, self.y).cuda()
-            u = self.net(torch.cat([self.x, self.y], dim=1)).cuda()
+            # u = self.net(self.x, self.y).to(device)
+            u = self.net(torch.cat([self.x, self.y], dim=1)).to(device)
             loss_global += torch.mean((u - (self.x)**3 + 3 * self.x * self.y **2) **2)
 
         elif 'Poisson' in self.ques_name:
-            u = self.net(torch.cat([self.x, self.y], dim=1)).cuda()
+            u = self.net(torch.cat([self.x, self.y], dim=1)).to(device)
             
             u_moni = 0.5 / (2*torch.pi**2) * ((torch.sin(torch.pi * (self.x)) * torch.sin(torch.pi * (self.y)))- (2 * torch.sin(2 * torch.pi * (self.x)) * torch.sin(2 * torch.pi * (self.y))) + (3 * torch.sin(3 * torch.pi * (self.x)) * torch.sin(3 * torch.pi * (self.y))) - (4 * torch.sin(4 * torch.pi * (self.x)) * torch.sin(4 * torch.pi * (self.y))))
             
@@ -486,7 +486,7 @@ class model():
             self.x_monitor = torch.tensor(self.x_monitor,requires_grad=True).float().to(device)
             self.u_monitor = torch.tensor(self.u_monitor,requires_grad=True).float().to(device)
 
-            u = self.net(self.x_monitor).cuda()
+            u = self.net(self.x_monitor).to(device)
 
             loss_global += torch.mean((u - self.u_monitor)**2)
             
@@ -563,10 +563,10 @@ class model():
 
         if self.coord_num == 3:
             # print(type(self.net))
-            # u_teacher = self.net(self.x,self.y,self.z).cuda()
-            u_teacher = self.net(torch.cat([self.x, self.y, self.z], dim=1)).cuda()
-            # u_student = self.net_student(self.x,self.y,self.z).cuda()
-            u_student = self.net_student(torch.cat([self.x, self.y, self.z], dim=1)).cuda()
+            # u_teacher = self.net(self.x,self.y,self.z).to(device)
+            u_teacher = self.net(torch.cat([self.x, self.y, self.z], dim=1)).to(device)
+            # u_student = self.net_student(self.x,self.y,self.z).to(device)
+            u_student = self.net_student(torch.cat([self.x, self.y, self.z], dim=1)).to(device)
         else:
             xy_cat = torch.cat([self.x, self.y], dim=1)
 
@@ -582,8 +582,8 @@ class model():
                 xy_cat = xy_cat[mask]
 
 
-            u_teacher = self.net(xy_cat).cuda()
-            u_student = self.net_student(xy_cat).cuda()
+            u_teacher = self.net(xy_cat).to(device)
+            u_student = self.net_student(xy_cat).to(device)
         
         return torch.mean((u_teacher - u_student)**2) * weight_teach
 
