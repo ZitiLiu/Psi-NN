@@ -25,8 +25,6 @@ pip install -r requirements.txt
 
 If you need to change dependencies, modify `requirements.txt` and reinstall.
 
-
-
 ## Code Structure
 
 - **Config/**: Stores hyperparameter configurations (e.g., number of nodes, iterations) for different examples in CSV format. Once computed, configurations should not be changed.
@@ -115,7 +113,6 @@ A: 0.012397093698382378
 
 ---
 
-
 ---
 
 ## License
@@ -130,7 +127,7 @@ If you use this code in your research, please cite this project:
 @article{liu_2025_automatic,
   title={Automatic Network Structure Discovery of Physics Informed Neural Networks via Knowledge Distillation},
   author={Liu, Ziti and Liu, Yang and Yan, Xunshi and Liu, Wen and Nie, Han and Guo, Shuaiqi and Zhang, Chen-an},
-  note={Manuscript under review},
+  note={Manuscript accept in principle},
   year={2025}
 }
 ```
