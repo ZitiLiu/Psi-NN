@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: If you use this software, please cite our paper below.
+title: Psi-NN2
+authors:
+  - family-names: Liu
+    given-names: Ziti
+  - family-names: Liu
+    given-names: Yang
+  - family-names: Yan
+    given-names: Xunshi
+  - family-names: Liu
+    given-names: Wen
+  - family-names: Nie
+    given-names: Han
+  - family-names: Guo
+    given-names: Shuaiqi
+  - family-names: Zhang
+    given-names: Chen-an
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Liu
+      given-names: Ziti
+    - family-names: Liu
+      given-names: Yang
+    - family-names: Yan
+      given-names: Xunshi
+    - family-names: Liu
+      given-names: Wen
+    - family-names: Nie
+      given-names: Han
+    - family-names: Guo
+      given-names: Shuaiqi
+    - family-names: Zhang
+      given-names: Chen-an
+  title: Automatic network structure discovery of physics informed neural networks via knowledge distillation
+  journal: Nature Communications
+  year: 2025
+  volume: 16
+  pages: 9558
+  doi: 10.1038/s41467-025-64624-3
+  url: https://doi.org/10.1038/s41467-025-64624-3

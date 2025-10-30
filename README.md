@@ -1,5 +1,7 @@
 # $\Psi$-NN Project Description
 
+> 🟢 Published in Nature Communications (2025): [DOI: 10.1038/s41467-025-64624-3](https://doi.org/10.1038/s41467-025-64624-3)
+
 $\Psi$-NN adopts a three-step method of "distillation - structure extraction - network reconstruction", which can automatically discover and implicitly embed the physical properties of PDEs into the MLP network structure.
 
 ![pipeline](image/README/pipeline.png "Pipeline")
@@ -124,11 +126,15 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](./LICEN
 If you use this code in your research, please cite this project:
 
 ```bibtex
-@article{liu_2025_automatic,
-  title={Automatic Network Structure Discovery of Physics Informed Neural Networks via Knowledge Distillation},
-  author={Liu, Ziti and Liu, Yang and Yan, Xunshi and Liu, Wen and Nie, Han and Guo, Shuaiqi and Zhang, Chen-an},
-  note={Manuscript accept in principle},
-  year={2025}
+@article{liu2025automatic,
+  author = {Liu, Ziti and Liu, Yang and Yan, Xunshi and Liu, Wen and Nie, Han and Guo, Shuaiqi and Zhang, Chen-an},
+  title = {Automatic network structure discovery of physics informed neural networks via knowledge distillation},
+  journal = {Nature Communications},
+  year = {2025},
+  volume = {16},
+  pages = {9558},
+  doi = {10.1038/s41467-025-64624-3},
+  url = {https://doi.org/10.1038/s41467-025-64624-3}
 }
 ```
 
